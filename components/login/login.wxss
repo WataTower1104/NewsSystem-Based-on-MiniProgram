@@ -1,0 +1,78 @@
+/* components/login/login.wxss */
+.body {
+  /* margin: 25rpx; */
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background: linear-gradient(45deg,rgba(0, 238, 255, 0.16), rgba(0, 38, 255, 0.322));
+
+}
+
+.form{
+  margin: auto;
+  padding: 20rpx;
+  width: 80%;
+  height: 70%;
+  /* border: rgb(44, 54, 56) solid 1rpx; */
+  border-radius: 28rpx;
+  background: #f2f2f259;
+}
+
+.form::before{    
+  content:'';
+  position:absolute;
+  /* top:0;
+  left:0; */
+  width:600rpx;
+  height:600rpx;
+  background:transparent url(https://636c-cloud1-3gxnf2n02c9c42ac-1317965161.tcb.qcloud.la/my_icon/logo.png?sign=121023b774e1b40a891308c27dd9225f&t=1686891060) no-repeat center;
+
+  filter:blur(5px);
+  z-index:-1;
+  background-size:cover;
+}
+
+.form form{
+  width: 100%;
+}
+
+.content{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  flex-direction: column;
+  margin: auto 0;
+  height: 100%;
+}
+
+.section {
+  margin: 25rpx auto;
+  width: 90%;
+}
+.title {
+  font-size: 36rpx;
+}
+.input {
+  margin: 30rpx 0;
+  border-bottom: 1px solid;
+  padding: 20rpx 0;
+  width: 100%;
+}
+.area {
+  margin: 50rpx auto;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.area button{
+  margin-top: 25rpx;
+  font-size: 35rpx;
+
+}
+
+.login{
+  background-color: #3469a1;
+  color: aliceblue;
+}

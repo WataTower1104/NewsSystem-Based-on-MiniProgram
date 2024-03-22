@@ -1,0 +1,43 @@
+<!--components/me/me.wxml-->
+<view id="mine">
+  <view class="header">
+      <image class="image" src="{{avatar}}" mode=""/>
+      <view class="name">{{username}}</view>
+      <view class="nav">
+        <view class="nav-item" bindtap="goToCollection">
+          <view>{{numofCollections}}</view>
+          <view class="nav-item-title">收藏</view>
+        </view>
+        <view class="nav-item" bindtap="goToHistory">
+          <view>{{numofHistory}}</view>
+          <view class="nav-item-title">历史</view>
+        </view>
+        <view class="nav-item">
+          <view>0</view>
+          <view class="nav-item-title">消息</view>
+        </view>
+      </view>
+
+      <view class="area">
+        <button style="margin: 30rpx 0; color: rgb(165, 48, 48);" bindtap="outLogin">退出登录</button>
+      </view>
+  </view>
+  <view class="mid">
+    <navigator url="../../pages/my/editinfo/editinfo">
+        <view class="mid-info">
+          修改个人信息
+        </view>
+    </navigator>
+    <navigator url="../../pages/my/mypublic/mypublic">
+      <view class="mid-publish">
+        我的发布
+      </view>
+    </navigator>
+    <navigator url="../../pages/my/about/about">
+        <view class="mid-about">
+          关于
+        </view>
+    </navigator>
+
+  </view>
+</view>
