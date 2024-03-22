@@ -1,0 +1,272 @@
+/* pages/content/content.wxss */
+/**index.wxss**/
+@import "../../assets/icon-style.wxss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  /* text-align: center; */
+  font-family: 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif';
+  justify-content: space-between;
+  font-size: 36rpx;
+  padding: 30rpx 30rpx;
+  background-color: hsl(0, 0%, 99%);
+}
+
+.container image {
+  width: 100px;
+  height: 100px;
+}
+
+.page-head {
+  font-size: 38rpx;
+  padding: 15rpx;
+}
+
+.info{
+  margin-top: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.source {
+  font-weight: bold;
+  font-size: 30rpx;
+  vertical-align: middle;
+  color: #666666;
+}
+
+.date {
+  flex-direction: row;
+  font-size: 30rpx;
+  margin-top: 10rpx;
+  color: #666;
+}
+
+.info{
+  margin: 30rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.publisherInfo{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+}
+
+.info .publisherInfo .avatar{
+  width: 90rpx;
+  height:90rpx;
+  margin-left: 20rpx;
+  border-radius: 50%;
+}
+
+.username{
+  color: #666666;
+  font-size: 40rpx;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 45rpx;
+}
+
+
+
+.page-foot {
+  font-size: 30rpx;
+}
+
+input {
+  border: 1rpx solid gray;
+  margin: 5rpx;
+  height: 80rpx;
+}
+
+map {
+  width: 100%;
+  height: 400rpx;
+}
+
+button {
+  margin: 10rpx;
+}
+
+
+/*分割线样式*/
+.divLine {
+  background: hsla(0, 0%, 39%, 0.226);
+  margin-top: 0rpx;
+  width: 100%;
+  height: 10rpx;
+}
+
+/* 评论区 */
+.container2 {
+  margin-top: 39rpx;
+  padding: 12rpx 30rpx;
+}
+
+.total {
+  font-size: 24rpx;
+  color: #646464;
+  margin-left: 1rpx;
+}
+
+.container_inp {
+  width: 90%;
+  height: 32rpx;
+  background-color: #F2F2F2;
+  border-radius: 8rpx;
+  padding: 17rpx 0rpx 17rpx 25rpx;
+  margin: 24rpx auto;
+}
+
+.container_place {
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.comment_title {
+  margin-top: 10rpx;
+  font-weight: bold;
+  font-size: 45rpx;
+  margin-bottom: 10rpx;
+}
+
+.total {
+  font-size: 30rpx;
+  color: #999999;
+  margin: 10rpx 0;
+}
+
+.end {
+  margin-top: 47rpx;
+  margin-bottom: 48rpx;
+  text-align: center;
+}
+
+.icon {
+  width: 70rpx;
+  height: 70rpx;
+  margin-right: 17rpx;
+  border-radius: 8rpx;
+}
+
+.item_right {
+  /* display: inline-block; */
+  width: 100%;
+  /* margin: auto; */
+  padding-bottom: 40rpx;
+}
+
+.container2-item {
+  /* display: flex; */
+  margin: 34rpx 0;
+  padding: 0 15rpx;
+  /* flex-direction: row; */
+  border-bottom: 2rpx solid #E5E5E5;
+}
+
+.userinfo{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 25rpx;
+  align-items: center;
+}
+
+.userName {
+  /* margin-bottom: 20rpx; */
+  font-size: 35rpx;
+  color: #303030;
+}
+
+
+.comment {
+  font-size: 35rpx;
+  color: #333333;
+  line-height: 40rpx;
+  margin: 20rpx 0rpx;
+  word-wrap:break-word; 
+  word-break:break-all; 
+  /* overflow: hidden; */
+}
+
+.publish_time {
+  display: block;
+  margin-top: 20rpx;
+  font-size: 25rpx;
+  color: #666666;
+}
+
+.input-container {
+  display: flex;
+  align-content: flex-end;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  position: relative;
+  padding: 10px;
+}
+
+.input-textarea {
+  width: 100%;
+  min-height: 50rpx;
+  resize: none;
+}
+
+.input-container .submit {
+  width: 90rpx;
+  text-align: center;
+  padding: 0;
+  background-color: transparent;
+}
+
+.input-container .submit[disabled]:not([type]) {
+  background-color: transparent;
+  color: rgba(0,0,0,.18);
+}
+
+
+/* 收藏按钮 */
+.buttons{
+  margin-top: 30rpx;
+  display:inline-block;
+  display:flex;
+}
+.buttons image{
+  margin-right: 15rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.buttons .button{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 250rpx;
+  padding: 10rpx;
+  border-radius: 35rpx;
+  font-size: 35rpx;
+  font-weight: normal;
+}
+
+.shoucang{
+  background-color: #d61515;
+  color: rgb(238, 238, 238);
+}
+
+.shoucang1{
+  background-color: #f6e9e9;
+  color: #cf4242;
+}
+.zhuanfa{
+
+  background-color: #339933;
+  color: white;
+}
+

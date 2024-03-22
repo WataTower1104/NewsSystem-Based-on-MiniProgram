@@ -1,0 +1,47 @@
+<!--pages/newsEditor/newsEditor.wxml-->
+<view>
+  <!-- 功能区 -->
+  <view class="functional-area">
+    <!-- 头栏 -->
+    <view class="handle">
+    <view class="left">
+      <picker bindchange="bindPickerChange" value="{{newsType}}" range="{{newsKindsArr}}" range-key="label">
+        <view class="picker">
+          {{newsType==-1?'点我选择类型':newsKindsArr[newsType].label}}
+        </view>
+      </picker>
+      <view>
+        <input name="title" class="title" placeholder="请输入新闻标题" maxlength="20" bindblur="getTitle"></input>
+        <input name="source" class="source" placeholder="请输入新闻来源" maxlength="15" bindblur="getSource"></input>
+      </view>
+    </view>
+    <i class="button iconfont icon-submit" bindtap="formSubmit"></i>
+  </view>
+            <!-- 操作栏 -->
+            <view class="toolbar" id='toolbar' bindtap="format">
+          <i class="iconfont icon-bold {{formats.bold ? 'ql-active' : ''}}" data-name="bold"></i>
+          <i class="iconfont icon-italic {{formats.italic ? 'ql-active' : ''}}" data-name="italic"></i>
+          <i class="iconfont icon-underline {{formats.underline ? 'ql-active' : ''}}" data-name="underline"></i>
+          <i class="iconfont icon-zuoduiqi {{formats.align === 'left' ? 'ql-active' : ''}}" data-name="align" data-value="left"></i>
+          <i class="iconfont icon-jvhzongduiqi {{formats.align === 'center' ? 'ql-active' : ''}}" data-name="align" data-value="center"></i>
+          <i class="iconfont icon-youduiqi {{formats.align === 'right' ? 'ql-active' : ''}}" data-name="align" data-value="right"></i>
+          <i class="iconfont icon-undo" bindtap="undo"></i>
+          <i class="iconfont icon-redo" bindtap="redo"></i>
+          <i class="iconfont icon-image" bindtap="insertImage"></i>
+          <i class="iconfont icon-clear" bindtap="clear"></i>
+          <i class="iconfont icon-indent" bindtap="tab"></i>
+          <i class="iconfont icon-quote {{formats.color === '#666666' ? 'ql-active' : ''}}" bindtap="mark"></i>
+        </view>
+  </view>
+  <!-- 编辑区 -->
+  <view class="container">
+    <view class="page-body">
+      <view>
+        <!-- 文章内容区，富文本编辑器 -->
+        <editor id="editor" class="ql-container" placeholder=">内容从这里开始" showImgSize showImgToolbar showImgResize bindstatuschange="onStatusChange" read-only="{{readOnly}}" bindready="onEditorReady"></editor>
+
+
+      </view>
+    </view>
+  </view>
+</view>

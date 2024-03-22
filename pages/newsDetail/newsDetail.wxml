@@ -1,0 +1,65 @@
+<!--pages/content/content.wxml-->
+<view class="container">
+  <view class='title'>{{newsContent.title}}</view>
+  <view class="info">
+    <view class="newsInfo">
+      <view class="source">{{newsContent.source}}</view>
+      <view class="date"> {{newsContent.date}} </view>
+    </view>
+    <view class="publisherInfo" bindtap="viewUserInfo">
+      <image class="avatar" src="{{newsContent.avatar}}"></image>
+      <view class="username">{{newsContent.userName}}</view>
+    </view>
+  </view>
+  <mp-html content="{{newsContent.describe}}" />
+
+  <view class="buttons">
+    <button class="zhuanfa button" open-type="share">
+      <image src='cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/分享.svg'></image>
+      <view>转发</view>
+    </button>
+    <button  class="shoucang button" bindtap="collection" wx:if="{{isCollected == 0}}">
+        <image src='cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/收藏.svg'></image>
+        <view>收藏</view>
+    </button>
+    <button  class="shoucang1 button" bindtap="collection" wx:if="{{isCollected == 1}}">
+        <!-- <image src='../../images/收藏.svg'></image> -->
+        <view>已收藏</view>
+    </button>
+  </view>
+</view>
+<!-- 分割线 -->
+<view class="divLine"></view>
+
+<!-- 评论区 -->
+<view class="container2">
+  <view class="comment_title">评论区</view>
+  <!-- 总共评论数 -->
+  <view class="total">共 {{total}} 条评论</view>
+  <!-- 评论框 -->
+  <view class="input-container">
+    <textarea style="height: {{textareaHeight}}rpx;" class="input-textarea" bindinput="onInput" bindlinechange="isMaxHeight" placeholder="请输入评论内容" scroll-y="{{scrollable}}" value="{{inputComment}}" maxlength="{{maxLength}}"></textarea>
+    <button class="submit iconfont icon-submit" bindtap="onSubmit" disabled="{{disableSubmit}}"></button>
+  </view>
+
+
+  <!-- 用户评论回复显示区域 -->
+  <view class="comments">
+    <view class="container2-item" wx:for="{{comments}}" wx:for-item="list" wx:key="key">
+
+      <view class="userinfo">
+        <image class="icon" src="{{list._avatar}}"></image>
+        <view class="userName">{{list._userName}}</view>
+      </view>
+      <view class="item_right">
+        <view class="comment">{{list._content}}</view>
+        <text class="publish_time">{{list._date}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 结束 -->
+  <view class="end" wx:if="{{flag == 1}}">
+    <text class="end_txt" space="nbsp">— 评论区已经见底了 —</text>
+  </view>
+  <!-- END -->
+</view>

@@ -1,0 +1,13 @@
+<!--pages/my/my.wxml-->
+<view class="outter">
+  <view class="login" wx:if="{{userId === ''}}">
+    <login bind:updateStorage="updateStorage"  bind:getNum="getNum" bind:getUserName="getUserName"></login>
+  </view>
+  <view wx:else>
+    <profile bind:updateStorage="updateStorage" username="{{userName}}"
+    numofCollections="{{numofCollections}}"
+    numofHistory="{{numofHistory}}" 
+    avatar="{{avatar}}"
+    ></profile>
+  </view>
+</view>

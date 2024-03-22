@@ -1,0 +1,24 @@
+<!--pages/myHistory/myHistory.wxml-->
+<view class="page">
+  <view wx:for="{{history}}" wx:key="index">
+    <navigator url="{{'../newsDetail/newsDetail?id='+item._newsId}}" class="card">
+      <view class="txt">
+        <view class="title">新闻标题：</view>
+        <view class="info">{{item._newsTitle}}</view>
+      </view>
+      <view class="txt">
+        <view class="title">新闻来源：</view>
+        <view class="info">{{item._newsSource}}</view>
+      </view>
+      <view class="txt">
+        <view class="title">浏览日期：</view>
+        <view class="info">{{item._date}}</view>
+      </view>
+    </navigator>
+  </view>
+  <view>
+    <view class="toast">
+      无更多历史数据
+    </view>
+  </view>
+</view>

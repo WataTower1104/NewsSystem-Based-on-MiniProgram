@@ -1,0 +1,60 @@
+<!--pages/my/editinfo/editinfo.wxml-->
+<!-- <text>编辑个人信息页</text> -->
+
+<view class="outter">
+
+  <!-- 修改头像 -->
+  <view class="avatar" bindtap="updateavatar">
+    <view class="avatar-text">头像</view>
+    <view>
+      <image class="avatar-img" src="{{src_avatar}}" />
+    </view>
+    <view class="arrowr1">
+      <image class="img_arrow1" src="cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/arrow-right.png" mode=""/>
+    </view>
+  </view>
+
+  <!-- 修改名字 -->
+  <view class="name" bindtap="editname">
+    <view class="name-text1">名字</view>
+    <view class="tapArea">
+      <view class="name-text2">{{userInfo._userName}}</view>
+      <image class="img_arrow2" src="cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/arrow-right.png" mode=""/>
+    </view>
+
+  </view>
+
+  <!-- 修改密码 -->
+  <view class="password" bindtap="update" data-statu="open">
+    <view class="password-text">修改密码</view>
+    <view class="view_arrow3">
+      <image class="img_arrow3" src="cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/arrow-right.png" mode=""/>
+    </view>
+  </view>
+  <!--弹出修改密码框-->
+  <view class="drawer_screen" bindtap="update" data-statu="close" wx:if="{{showModalStatus}}"></view>
+  <!--content-->
+  <!--使用animation属性指定需要执行的动画-->
+  <view class="animation_position">
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+      <!--drawer content-->
+      <view class="drawer_title">修改密码</view>
+      <view class="drawer_content">
+        <view class="grid">
+          <label class="title col-0">原密码</label>
+          <input class="input_base input_h30 col-1" bindblur="inputOldPassword" placeholder="请输入原密码"></input>
+        </view>
+        <view class="grid">
+          <label class="title col-0">新密码</label>
+          <input class="input_base input_h30 col-1" bindblur="inputNewPassword_1" placeholder="请输入新密码"></input>
+        </view>
+        <view class="grid">
+          <label class="title col-0">确认密码</label>
+          <input class="input_base input_h30 col-1" bindblur="inputNewPassword_2" placeholder="再次输入确认"></input>
+        </view>
+      </view>
+      <view class="btn_ok" bindtap="updatePassword" >确定</view>
+    </view>
+  </view>
+</view>
+

@@ -1,0 +1,58 @@
+<!-- 导航栏 -->
+<view class="nav-containor">
+  <view class="banner">
+    <scroll-view scroll-x="true" scroll-with-animation="true" scroll-into-view="nav-{{select > 0 ? select -1 : select}}">
+      <view wx:for="{{sortList}}" wx:for-index="index" wx:key="index" id="nav-{{index}}" class="sort {{index == select ? 'choose' : ''}}" data-index='{{index}}' bindtap="activeTab">
+        {{item.name}}
+        <view class="line" wx:if="{{index == select}}"></view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="nav-right iconfont icon-addNews" bindtap="addNews">
+  
+  </view>
+</view>
+
+
+<swiper style="height:{{height}}px" current="{{select}}" duration="300" bindchange="activeSw">
+  <swiper-item>
+    <!-- 全部内容 -->
+    <view class="box0">
+      <view wx:for="{{briefs[0].brief}}" wx:for-item="items" bindtap="getEvent" data-id="{{items._id}}">
+      <view class="artical">
+        <view class="title">
+          <text class="type{{type[items._newsType]}}">[{{items._newsType}}]</text>
+          <text> {{items._newsTitle}}</text>
+        </view>
+        <view class="dibu">
+          <text class="source">{{items._newsSource}}</text>
+          <text class="time">{{items._date}}</text>
+        </view>
+      </view>
+    </view>
+    </view>
+  </swiper-item>
+
+  <!-- 分类筛选 -->
+  <swiper-item wx:for="{{sortList.length-1}}" wx:key="index">
+
+    <view class="box{{index+1}}">
+    <view wx:if="{{briefs[index+1].brief.length==0}}" class="caution" style="height: 1200rpx;">
+      <text style="padding-top: 50rpx;font-size:20px;">未获取到信息</text>
+      <image src="cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/空.png" mode="widthFix"/>
+    </view>
+      <view wx:for="{{briefs[index+1].brief}}" wx:for-item="items" bindtap="getEvent" data-id="{{items._id}}" >
+        <view class="artical">
+          <view class="title">
+            <view>{{items._newsTitle}}</view>
+          </view>
+          <view class="dibu">
+            <text class="source">{{items._newsSource}}</text>
+            <text class="time">{{items._date}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </swiper-item>
+</swiper>

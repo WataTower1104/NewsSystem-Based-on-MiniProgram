@@ -1,0 +1,32 @@
+<!--pages/my/about/about.wxml-->
+<!-- <text>关于页</text> -->
+<view class="outter">
+  <view class="logo">
+    <image class="img" src="cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/logo.png"/>
+  </view>
+  <view class="name">
+    新闻系统
+  </view>
+  <view class="version">
+    Version 1.0
+  </view>
+  <view class="foot">
+    <view class="pact">
+      《软件许可及服务协议》
+    </view>
+    <view class="pact">
+      《隐私保护指引摘要》《隐私保护指引》
+    </view>
+    <view class="other">
+      客服电话: 400670 0700
+    </view>
+    <view class="other">
+      140608 版权所有
+    </view>
+    <view class="other">
+      Copyright @2023-2023 140608.All Rights Reserved
+    </view>
+  </view>
+</view>
+
+

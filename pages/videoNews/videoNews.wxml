@@ -1,0 +1,74 @@
+<!--pages/videoNew/videoNew.wxml-->
+<view>
+  <!-- 评论区按钮START -->
+  <movable-area class="movable-area">
+    <movable-view class="movable-view" direction="all">
+      <button plain='true' class="circle" bindtap="popupTap">
+        <image mode='aspectFill' src='cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/评论.png' class='image'></image>
+      </button>
+    </movable-view>
+  </movable-area>
+
+  <!-- 视频滑块START -->
+  <swiper class="card-swiper" circular="true" vertical="true" duration="500" interval="5000" bindchange="cardSwiper">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index" class="cardCur==index?'cur':''">
+      <view class="swiper-item image-banner">
+        <video id="{{item._id}}" autoplay="{{index === 0?true:false}}" controls="{{false}}" src="{{item._videoPath}}" loop style="height: 100vh;width: 100vw;"></video>
+      </view>
+      <view class="video-title">
+        <view class="video-title-username" bindtap="viewUserInfo">
+          @{{item._userName}}
+        </view>
+        <view class="video-title-text">
+          {{item._title}}
+        </view>
+        <view class="video-title-time">
+          {{item._date}}
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 弹出评论区 -->
+<view class='popup' wx:if="{{popShow}}">
+  <!-- 蒙版START -->
+  <view class='mask' catchtouchmove="preventTouchMove" catchtap='closePop'>
+  </view>
+
+  <!-- 弹出层 -->
+  <view class='popup_main' id='popup_main'>
+    <!-- 关闭按钮 -->
+    <view class='close_wrapper'>
+      <image class='close_icon' src='cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/关闭.png' bindtap='closePop'></image>
+    </view>
+
+    <!-- 主要内容 -->
+    <scroll-view class='pop_list_wrapper' scroll-y>
+      <view class="container2-item" wx:for="{{ comments }}" wx:for-item="commentsItem" wx:key="commentsIndex">
+
+        <view class="userinfo">
+          <image class="icon" src="{{commentsItem._avatar}}"></image>
+          <view class="userName">{{commentsItem._userName}}</view>
+        </view>
+        <view class="item_right">
+          <view class="comment">{{commentsItem._content}}</view>
+          <text class="publish_time">{{commentsItem._date}}</text>
+        </view>
+      </view>
+      <view class="warning" wx:if="{{comments.length == 0?true:false}}">
+        <image src="cloud://cloud1-3gxnf2n02c9c42ac.636c-cloud1-3gxnf2n02c9c42ac-1317965161/my_icon/空.png" mode="widthFix"/>
+        <text>这里还什么都没有 :-(</text>
+      </view>
+    </scroll-view>
+
+
+
+    <view class="input-container">
+    <textarea style="height: {{textareaHeight}}rpx;" class="input-textarea" bindinput="bindInputMsg" bindblur="bindInputMsg" bindlinechange="isMaxHeight" placeholder="点击这里发送评论" scroll-y="{{scrollable}}" value="{{inputMessage}}" maxlength="{{maxLength}}"></textarea>
+    <button class="submit iconfont icon-submit" bindtap="sendComment" disabled="{{disableSubmit}}"></button>
+  </view>
+
+
+  </view>
+</view>

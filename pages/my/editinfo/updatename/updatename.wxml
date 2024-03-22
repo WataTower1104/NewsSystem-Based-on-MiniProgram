@@ -1,0 +1,5 @@
+<!--pages/my/editinfo/updatename/updatename.wxml-->
+<!-- <text>pages/my/editinfo/updatename/updatename.wxml</text> -->
+<view class="inputview">
+  <input type="text"/>
+</view>

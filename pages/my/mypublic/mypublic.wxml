@@ -1,0 +1,64 @@
+<!--pages/my/mypublic/mypublic.wxml-->
+<view class='productNav'>
+  <!-- 左侧 -->
+  <view class='left'>
+    <view class="{{active==0?'selected':'normal'}}" id="0" bindtap='switchNav'>新闻</view>
+    <view class="{{active==1?'selected':'normal'}}" id="1" bindtap='switchNav'>视频</view>
+    <!--     <view class="{{active==2?'selected':'normal'}}" id="2" bindtap='switchNav'>手机</view> -->
+  </view>
+  <!-- 右侧 -->
+  <view class='right'>
+    <view class='type'>
+      <!-- current:当前所在滑块的 index -->
+      <!-- vertical:滑动方向是否为纵向 -->
+      <swiper style="height:{{height+25}}px" current='{{currentTab}}' bindchange="activeSw">
+        <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
+        <swiper-item id="0">
+          <view class="box0">
+            <view wx:for="{{myNewsPublished}}" wx:key="index">
+              <navigator url="{{'../../newsDetail/newsDetail?id='+item._id}}" class="card">
+                <view class="txt">
+                  <view class="title">新闻标题：</view>
+                  <view class="info">{{item._newsTitle}}</view>
+                </view>
+                <view class="txt">
+                  <view class="title">新闻来源：</view>
+                  <view class="info">{{item._newsSource}}</view>
+                </view>
+                <view class="txt">
+                  <view class="title">发布时间：</view>
+                  <view class="info">{{item._date}}</view>
+                </view>
+              </navigator>
+            </view>
+          </view>
+          <view class="toast">
+          无更多发布内容
+          </view>
+        </swiper-item>
+
+        <swiper-item id="1">
+          <view class="box1">
+            <view wx:for="{{myVideoPublished}}" wx:key="index">
+              <navigator url="{{'../../videoDetail/videoDetail?id='+item._id}}" class="card">
+                <view class="txt">
+                  <view class="title">视频标题：</view>
+                  <view class="info">{{item._title}}</view>
+                </view>
+                <view class="txt">
+                  <view class="title">发布时间：</view>
+                  <view class="info">{{item._date}}</view>
+                </view>
+              </navigator>
+            </view>
+          </view>
+          <view class="toast">
+          无更多发布内容
+          </view>
+        </swiper-item>
+
+
+      </swiper>
+    </view>
+  </view>
+</view>

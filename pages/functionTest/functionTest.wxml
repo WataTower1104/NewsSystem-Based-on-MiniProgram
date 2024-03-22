@@ -1,0 +1,23 @@
+<!--pages/functionTest/functionTest.wxml-->
+<view wx:for="{{comments}}" wx:key="index" data-index="{{index}}" bindtap="getEvent">
+  <view class="itemRoot" >
+    <view>ID:{{item._content}}</view>
+    <view>NAME:{{item._userId}}</view>
+  </view>
+</view>
+<button bindtap="getComment">get</button>
+<button bindtap="getNewsDetail">get</button>
+<view wx:for="{{briefs}}" wx:key="index" data-index="{{index}}" bindtap="getEvent">
+  <view class="itemRoot" >
+    <view>Title:{{item._newsTitle}}</view>
+    <view>SOURCE:{{item._newsSource}}</view>
+    <view>DATE:{{item._date}}</view>
+  </view>
+</view>
+<button bindtap="getNews">getBriefs</button>
+<button bindtap="getEvent">ss</button>
+<input type="text" model:value="{{comment}}" bindinput="onInputChange"/>
+<button bindtap="postComment">post</button>
+
+测试获取历史记录
+<button bindtap="getVideos">getvideo</button>

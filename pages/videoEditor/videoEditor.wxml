@@ -1,0 +1,43 @@
+<!--pages/videoEditor/videoEditor.wxml-->
+
+<!-- 文字填充区START -->
+<view class="handle">
+  <view class="left">
+    <view>
+      <input class="title" placeholder="请输入新闻标题" maxlength="20" bindblur="getTitle"></input>
+      <view class="input-container">
+        <textarea style="height: {{textareaHeight}}rpx;" class="input-textarea" bindinput="onInput" bindlinechange="isMaxHeight" placeholder="请输入新闻概括" scroll-y="{{scrollable}}" value="{{inputRecap}}" maxlength="{{maxLength}}"></textarea>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 文字填充区END -->
+
+<view class="main">
+
+    <!-- 功能区START -->
+    <view class="footerbtn">
+        <i class="button iconfont icon-plus upload" bindtap="chooseVideo" wx:if="{{isUpload}}"></i>
+        <i class="button iconfont icon-clear delete" bindtap="deleteVideo" wx:else></i>
+        <i class="button iconfont icon-submit" bindtap="submitVideo"></i>
+    </view>
+    <!-- 功能区END -->
+
+    <!-- 上传展示区START -->
+    <view class="playerInfo">
+        <view class="video" wx:if="{{isUpload}}">
+            <view class="videoContent" bindtap="chooseVideo" >
+                <!-- <image class="playImg" src="../images/uploadVideo.png" mode="aspectFill"/> -->
+            </view>
+        </view>
+        <view class="video" wx:else>
+            <video class="videoContent"
+               show-center-play-btn="true" src="{{videoUrl}}" object-fit="contain" 
+            >
+        </video>
+        </view>
+    </view>
+    <!-- 上传展示区END -->
+
+</view>
+

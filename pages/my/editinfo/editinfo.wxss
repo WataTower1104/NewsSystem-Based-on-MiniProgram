@@ -1,0 +1,185 @@
+/* pages/my/editinfo/editinfo.wxss */
+page{
+  background-color: rgb(248, 237, 237);
+  /* height: 1300rpx; */
+  font-size: 40rpx;
+}
+.avatar{
+  background-color: white;
+  width: 100%;
+  height: 180rpx;
+  /* border: red solid 1rpx; */
+  display: flex;
+  /* flex-flow: row nowrap; */
+  /* justify-content: space-between; */
+}
+.avatar-text{
+  /* border: springgreen solid 1rpx; */
+  margin-top: 60rpx;
+  margin-left: 20rpx;
+  width: 120rpx;
+  height: 80rpx;
+  /* position: absolute; */
+}
+.avatar-img{
+  width: 140rpx;
+  height: 140rpx;
+  margin-left: 370rpx;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  /* border: red solid 1rpx; */
+  /* position: absolute; */
+}
+.img_arrow1{
+  width: 50rpx;
+  height: 55rpx;
+  align-items: center;
+  margin-top: 55rpx;
+  margin-left: 20rpx;
+  float: right;
+}
+.view_arrow2{
+  width: 20%;
+  /* border: red solid 1rpx; */
+}
+.view_arrow3{
+  width: 100%;
+}
+.img_arrow3{
+  width: 50rpx;
+  height: 55rpx;
+  /* border: red solid 1rpx; */
+  margin-top: 25rpx;
+  float: right;
+  margin-right: 32rpx;
+}
+
+.img_arrow2{
+  width: 50rpx;
+  height: 55rpx;
+  /* border: red solid 1rpx; */
+
+  margin-right: 32rpx;
+}
+
+.password{
+  margin-top: 20rpx;
+}
+.password,.name{
+  background-color: white;
+  border-top: 1rpx solid rgb(250, 226, 226);
+  width: 100%;
+  height: 100rpx;
+  /* border: red solid 1rpx; */
+  display: flex;
+}
+
+.name{
+  justify-content: space-between;
+}
+
+.tapArea{
+  display:flex;
+  justify-items: center;
+  align-items:center;
+
+}
+
+.tapArea .name-text2{
+  text-align: right;
+  width: 500rpx;
+  white-space: nowrap; /* 不换行 */
+  overflow: hidden; /* 超出隐藏 */
+  text-overflow: ellipsis; /* 超出部分显示省略号 */
+}
+
+.password-text,.name-text1{
+  /* font-size: 45rpx; */
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  width: 220rpx;
+  height: 80rpx;
+  /* border: red solid 1rpx; */
+}
+.name-text2{
+  /* margin-left: 400rpx; */
+  /* border: red solid 1rpx; */
+}
+
+
+/* 修改密码 */
+/* 隐藏内容样式 */
+/*mask*/
+.drawer_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+}
+/*content*/
+.animation_position{
+  display: flex;
+  width:100%;
+  justify-content: center;
+}
+.drawer_box{
+  overflow: hidden;
+  position: fixed;
+  /* top:80px; */
+  bottom:300rpx;
+  z-index: 1001;
+  background: #FAFAFA;
+  border-radius: 30px;
+  width: 80%;
+  left: 75rpx;
+  
+}
+.drawer_title {
+  padding: 15px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+}
+.drawer_content {
+  overflow-y: scroll;
+  /*超出父盒子高度可滚动*/
+}
+.btn_ok {
+  margin-top:5%;
+  padding: 10px;
+  font: 20px "microsoft yahei";
+  text-align: center;
+  border-top: 1px solid #E8E8EA;
+  color: #40A4D6;
+}
+.bottom {
+  padding-bottom: 8px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  margin:5% 0 0 0;
+  font-size: 35rpx;
+  /* border-bottom: 2rpx solid #ccc; */
+}
+.input_base {
+  width:80%;
+  margin:5% 0 0 0;
+  padding-left:5%;
+  border-bottom: 2rpx solid #ccc;
+}
+input {
+  font: 15px "microsoft yahei";
+  background: #fff;
+  color: #000;
+}
+.grid {
+  display: flex;
+  margin:20px;
+}

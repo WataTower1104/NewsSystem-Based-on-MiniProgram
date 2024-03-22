@@ -1,0 +1,82 @@
+/* pages/my/mypublic/mypublic.wxss */
+.productNav {
+  /* display: flex;
+  flex-direction: column; */
+  font-family: "Microsoft YaHei";
+  height: 100%;
+  background-color: #f1f1f1;
+}
+
+.left {
+  /* width: 160rpx; */
+  display: flex;
+  width: 100%;
+  font-size: 30rpx;
+  background-color: #f4f4f4;
+  /* margin-left: -25rpx; */
+  /* height: 1205rpx; */
+  /* border: red solid 1rpx; */
+}
+
+.left view {
+  width: 50%;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+  /* border: rgb(71, 8, 172) solid 1rpx; */
+}
+
+.selected {
+  background-color: #fff;
+  border-bottom: 2px solid #0060f1;
+  font-weight: bold;
+  color: #000000;
+}
+
+.normal {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.right {
+  width: 100%;
+  padding-bottom: 20rpx;
+  /* margin: 0; */
+  /* background-color: #f4f4f4; */
+  /* border-bottom: 1px solid #cc0505; */
+  /* height: 600rpx; */
+  /* margin-top: -130rpx; */
+  /* border: red solid 1rpx; */
+}
+
+.card {
+  margin: 30rpx;
+  background-color: #FFF;
+  border-radius: 12rpx;
+  /* box-shadow: rgb(0, 0, 0 / 20%); */
+  padding: 20rpx;
+  /* border: rgb(44, 54, 56) solid 1rpx; */
+  /* margin-top: -20rpx; */
+}
+
+.txt {
+  margin: 16rpx 0;
+  display: flex;
+}
+
+.title {
+  color: #666;
+  /* width: 200rpx; */
+  flex: 2.5;
+}
+
+.info {
+  color: #333;
+  flex: 5.8;
+}
+
+.toast {
+  text-align: center;
+  font-size: 40rpx;
+  color: #555;
+}

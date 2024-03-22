@@ -1,0 +1,8 @@
+{             
+  "usingComponents": {
+    "mp-html": "mp-html"
+  },
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "新闻详细"
+
+}

@@ -1,0 +1,87 @@
+/* pages/publishShow/publishShow.wxss */
+.header{
+  padding-bottom: 40rpx;
+  width: 100%;
+  background: linear-gradient(45deg,rgba(0, 238, 255, 0.16), rgba(0, 38, 255, 0.322));
+}
+
+.image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-top: 30rpx;
+  position: relative;
+  left: 50%;
+  margin-left: -60rpx;
+}
+
+.name{
+  text-align: center;
+  margin-top: 10rpx;
+}
+
+.productNav {
+  font-family: "Microsoft YaHei";
+  height: 100%;
+  background-color: #f1f1f1;
+}
+
+.left {
+  display: flex;
+  width: 100%;
+  font-size: 30rpx;
+  background-color: #f4f4f4;
+}
+
+.left view {
+  width: 50%;
+  text-align: center;
+  height: 90rpx;
+  line-height: 90rpx;
+}
+
+.selected {
+  background-color: #fff;
+  border-bottom: 2px solid #0060f1;
+  font-weight: bold;
+  color: #000000;
+}
+
+.normal {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.right {
+  width: 100%;
+  padding-bottom: 20rpx;
+}
+
+.card {
+  margin: 30rpx;
+  background-color: #FFF;
+  border-radius: 12rpx;
+  padding: 20rpx;
+
+}
+
+.txt {
+  margin: 16rpx 0;
+  display: flex;
+}
+
+.title {
+  color: #666;
+  flex: 2.5;
+}
+
+.info {
+  color: #333;
+  flex: 5.8;
+}
+
+.toast {
+  text-align: center;
+  font-size: 40rpx;
+  color: #555;
+}

@@ -1,0 +1,33 @@
+/* pages/my/about/about.wxss */
+.name,.pact,.other,.version,.logo{
+  display: flex;
+  justify-content: center;
+}
+.logo{
+  /* border: blue solid 1rpx; */
+  margin-top: 250rpx;
+}
+.img{
+  width: 150rpx;
+  height: 150rpx; 
+}
+.name{
+  margin-top: 10rpx;
+  font-size: 50rpx;
+}
+.version{
+  display: flex;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+}
+.foot{
+  margin-top: 400rpx;
+}
+.pact{
+  font-size: 28rpx;
+  color: rgb(45, 111, 172);
+}
+.other{
+  font-size: 23rpx;
+  color: rgb(175, 166, 166);
+}

@@ -1,0 +1,8 @@
+/* pages/my/my.wxss */
+.login{
+  height: 100%;
+}
+
+.outter{
+  height: 100%;
+}

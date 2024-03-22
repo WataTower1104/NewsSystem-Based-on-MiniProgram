@@ -1,0 +1,11 @@
+/* pages/my/editinfo/updatename/updatename.wxss */
+.inputview{
+  /* height: 100rpx;
+  width: 100%; */
+  /* border: brown solid 1rpx; */
+}
+input{
+  height: 100rpx;
+  width: 100%;
+  border: brown solid 1rpx;
+}
