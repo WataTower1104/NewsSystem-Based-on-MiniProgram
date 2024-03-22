@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/newsEditor/newsEditor",
+    "pages/functionTest/functionTest",
+    "pages/my/editinfo/editinfo",
+    "pages/my/editinfo/updatename/updatename",
+    "pages/my/mypublic/mypublic",
+    "pages/my/about/about",
+    "pages/videoNews/videoNews",
+    "pages/newsDetail/newsDetail",
+    "pages/videoEditor/videoEditor",
+    "pages/myCollection/myCollection",
+    "pages/myHistory/myHistory",
+    "pages/publishShow/publishShow",
+    "pages/videoDetail/videoDetail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#235c99",
+    "navigationBarTitleText": "新闻系统",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#008000",
+    "backgroundColor": "#FFFFFF",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath":"images/home.png",
+        "selectedIconPath":"images/home-act.png"
+      },
+      {
+        "pagePath": "pages/videoNews/videoNews",
+        "iconPath":"images/video.png",
+        "selectedIconPath":"images/video-act.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath":"images/profile.png",
+        "selectedIconPath":"images/profile-act.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "enablePullDownRefresh": true
+}
